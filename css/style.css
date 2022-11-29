@@ -1,0 +1,300 @@
+/*Styling font size*/
+body{
+  font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+
+/*Styling nav*/
+nav{
+  width: 100%;
+  background-color: #1F7A8C;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav li{
+  margin-bottom: 15px;
+}
+
+nav li:last-child{
+  margin-bottom: 0px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover{
+  color:#022B3A;
+  text-decoration: underline; 
+}
+
+nav a:focus{
+  color:#022B3A;
+  text-decoration: underline; 
+}
+
+.active{
+  border: dotted 2px #E1E5F2 ;
+  text-transform: uppercase;
+}
+
+
+/*Styling main*/
+h1{
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  display: none;
+}
+
+h3{
+  display: none;
+}
+
+
+/*Styling images when in focus*/
+div img:focus{
+  border: 7px #022B3A dashed;
+}
+
+
+/*Styling footer*/
+footer{
+  font-size: small;
+  text-align: center;
+}
+
+
+/*Styling skip to main content button*/
+.skip{
+  background: #ffffff;
+  left: 0;
+  padding: 5px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  position: absolute; 
+  top: -100px;
+}
+.skip:focus{
+  top: 40px;
+}
+
+
+/*MOBILE VIEW*/
+
+
+/*Styling flex for work page*/
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex img{
+  border: solid 10px #1F7A8C;
+  margin: 10px;
+  width: 75%;
+  align-self: center;
+}
+
+
+/*Styling grid for about page*/
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid img{
+  border: solid 10px #1F7A8C;
+  background: #ffffff;
+  margin: 10px;
+  width: 300px;
+  justify-self: center;
+}
+
+
+/*Styling form for contact page*/
+form {
+  width: 80%;
+  margin: auto;
+}
+
+legend{ 
+  padding-top: 30px;
+  font-size: larger;
+  font-weight:bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label{
+  display: inline-block;
+  margin-right:10px;
+  padding-top: 10px;
+  width:100%;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+textarea{
+  width: 100%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #1F7A8C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+#medium:hover,#github:hover,#linkedin:hover,#clifton:hover{
+  opacity:0.7
+}
+
+
+/*TABLET VIEW*/
+
+
+@media screen and (min-width: 768px){
+
+
+  /*Styling nav in tablet view*/
+  nav ul{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  nav li{
+    margin: 0;
+  }
+
+
+  /*Styling sticky header in tablet view */
+ header{
+  position: sticky;
+  top:0;
+  z-index: 1;
+ }
+
+  
+  /*Styling main in tablet view*/
+  h2{
+    display: block;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+
+  /*Styling flex for work page in tablet view*/
+  .flex{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flex img{
+    height: 325px;
+    width: 325px;
+  }
+
+
+  /*Styling grid for aboute page in tablet view*/
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid img{
+    width: 80%;
+    align-self: center;
+  }
+  .grid img:last-child{
+    grid-column: 1/-1;
+    height: 400px;
+  }
+}
+
+
+/*LARGER SCREEN VIEW*/
+
+
+@media screen and (min-width: 1024px){
+
+  /*Styling nav in larger screen view*/
+  nav ul{
+    justify-content: end;
+  }
+  nav li{
+    margin-right: 20px;
+  }
+
+
+  /*Styling h3 in larger screen view*/
+  h3{
+    display: block;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+
+  /*Styling flex for work page in larger screen view*/
+  .flex img{
+    height: 300px;
+    width: 300px;
+  }
+  
+  
+  /*Styling grid for about page in larger screen view*/
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+  .grid img{
+    width: 300px;
+    height: 300px;
+  }
+  .grid img:last-child{
+    grid-column: 3;
+    height: 300px;
+  }
+}
+
+
