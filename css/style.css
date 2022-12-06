@@ -43,10 +43,13 @@ nav a:focus{
 }
 
 .active{
-  border: dotted 2px #E1E5F2 ;
+  border: dotted 3px black ;
   text-transform: uppercase;
 }
 
+.active a{
+  color: black;
+}
 
 /*Styling main*/
 h1{
